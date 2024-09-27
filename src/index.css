@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gowun+Batang:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.regular {
+    font-family: "Gowun Batang", serif;
+    font-optical-sizing: auto;
+
+  }
+.caveat {
+  font-family: "Caveat", system-ui;
+  font-optical-sizing: auto;
+
+}
+
+.josefin {
+  font-family: "Josefin Sans", system-ui;
+  font-optical-sizing: auto;
+}
