@@ -13,19 +13,19 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState('categories'); // Controls active tab
 
   const categories = [
-    { name: 'Vegetables & Fruits', icon: '🍏' },
-    { name: 'Vegan Meat', icon: '🍖' },
-    { name: 'Seafood', icon: '🦐' },
-    { name: 'Dairy', icon: '🧀' },
-    { name: 'Bakery', icon: '🥖' },
-    { name: 'Beverages', icon: '🥤' },
-    { name: 'Weekly Discounts', icon: '💸' },
+    { name: 'Vegetables & Fruits', icon: '🍏' ,path:'/vegetables' },
+    { name: 'Vegan Meat', icon: '🍖',path:'/Vegan' },
+    { name: 'Seafood', icon: '🦐',path:'/Seafood' },
+    { name: 'Dairy', icon: '🧀' ,path:'/Dairy'},
+    { name: 'Bakery', icon: '🥖' ,path:'/Bakery'},
+    { name: 'Beverages', icon: '🥤' ,path:'/Beverages'},
+    { name: 'Weekly Discounts', icon: '💸' ,path:'/Weekly'},
   ];
 
   const menuItems = [
-    { name: 'Item 1' },
-    { name: 'Item 2' },
-    { name: 'Item 3' },
+    { name: 'Item 1', path: '/item1' },
+    { name: 'Item 2', path: '/item2' },
+    { name: 'Item 3', path: '/item3' },
   ];
 
   return (
@@ -45,13 +45,13 @@ const Navbar = () => {
         </div>
 
         {/* Search bar for lg, hidden on md and sm */}
-        <div className="hidden lg:flex lg:ml-96">
+        <div className="hidden lg:flex ">
           <input
             type="search"
             placeholder="Search ..."
-            className="border-l border-t border-b border-black w-64 lg:w-96 pt-2 pb-2 px-2 py-2 border-dashed rounded-l-full focus:outline-dashed focus:ring-0"
+            className="border-l border-t border-b border-black w-64 lg:w-[600px] pt-2 pb-2 px-2 py-2 border-dashed rounded-l-full focus:outline-dashed focus:ring-0"
           />
-          <button className="relative right-12 bg-green-600 rounded-l-none border-b border-green-600 border-t-border-orange-600 flex text-white pt-[8px] pr-4 pb-[9px] pl-4 rounded-r-full focus:outline-none focus:ring-0">
+          <button className="relative right-12 bg-green-600 rounded-l-none border-b border-green-600 border-t-border-orange-600 flex text-white pt-[10px] pr-4 pb-[9px] pl-4 rounded-r-full focus:outline-none focus:ring-0">
             Search
           </button>
         </div>
@@ -166,7 +166,6 @@ const Navbar = () => {
                   <span className="text-xl">{category.icon}</span>
                   <span className="text-lg text-gray-700">{category.name}</span>
                 </div>
-                <FaChevronRight className="text-gray-500" />
               </li>
             ))}
           </ul>
@@ -178,7 +177,6 @@ const Navbar = () => {
             {menuItems.map((item, index) => (
               <li key={index} className="flex justify-between items-center px-6 py-3 hover:bg-gray-200">
                 <div className="text-lg text-gray-700">{item.name}</div>
-                <FaChevronRight className="text-gray-500" />
               </li>
             ))}
           </ul>
@@ -233,16 +231,19 @@ const Navbar = () => {
                 >
                   <FaTimes className="text-xl text-orange-500" />
                 </div>
-                <ul className="mt-8 space-y-4">
-                  <li className="py-2 hover:bg-gray-100">
-                    <a href="#">Item 1</a>
-                  </li>
-                  <li className="py-2 hover:bg-gray-100">
-                    <a href="#">Item 2</a>
-                  </li>
-                  <li className="py-2 hover:bg-gray-100">
-                    <a href="#">Item 3</a>
-                  </li>
+                <ul className="mt-8 space-y-4 ">
+                {activeTab === 'categories' && (
+          <ul className="mt-4">
+            {categories.map((category, index) => (
+              <li key={index} className="flex justify-between items-center px-2 py-3  hover:bg-gray-200">
+                <div className="flex items-center space-x-3">
+                  <span className="text-xl">{category.icon}</span>
+                  <span className="text-lg text-gray-700">{category.name}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
                 </ul>
               </div>
             </div>
