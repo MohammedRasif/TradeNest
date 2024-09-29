@@ -12,7 +12,7 @@ import img5 from "./debit card3.png";
 const Footer = () => {
     return (
         <div className="bg-green-500 py-2">
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 mx-3 lg:mx-20 my-10">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10  lg:mx-20 my-10">
                 <div>
                     <div className="font-semibold items-center flex">
                         <h1 className="text-2xl">Broadway Store</h1>
@@ -56,8 +56,8 @@ const Footer = () => {
 
             <hr />
 
-            <footer className="footer text-[17px] text-base-content mx-3 lg:px-20 py-10">
-                <aside>
+            <footer className="footer  text-[17px] text-base-content  lg:px-20 py-10   md:pl-2 ">
+                <aside className="lg:pl-0 md:pl-0 pl-2">
                     <h1 className="text-3xl font-semibold">Trade<span className="text-green-800">Nest</span></h1>
                     <img src="https://res.cloudinary.com/dqb5izi3a/image/upload/v1727444853/ntlxfntthlwu1oevmpgm.png" className="h-32" alt="" />
 
@@ -75,7 +75,7 @@ const Footer = () => {
                     </div>
                 </aside>
 
-                <nav>
+                <div >
                     <h6 className="text-2xl font-semibold">Categories</h6>
                     <a className="link link-hover">Smartphones</a>
                     <a className="link link-hover">Laptops</a>
@@ -83,34 +83,34 @@ const Footer = () => {
                     <a className="link link-hover">Cameras</a>
                     <a className="link link-hover">Headphones</a>
                     <a className="link link-hover">Bathroom</a>
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <h6 className="text-2xl font-semibold">Useful Links</h6>
                     <a className="link link-hover">Promotions</a>
                     <a className="link link-hover">Stores</a>
                     <a className="link link-hover">Our contacts</a>
                     <a className="link link-hover">Delivery & Return</a>
                     <a className="link link-hover">Outlet</a>
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <h6 className="text-2xl font-semibold">Useful Links</h6>
                     <a className="link link-hover">Blog</a>
                     <a className="link link-hover">Our contacts</a>
                     <a className="link link-hover">Promotions</a>
                     <a className="link link-hover">Stores</a>
                     <a className="link link-hover">Delivery & Return</a>
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <h6 className="text-2xl font-semibold">Download App on Mobile:</h6>
                     <h1>15% discount on your first purchase</h1>
-                    <div className="flex">
+                    <div className="flex md:flex-col lg:flex-row ">
                         <img src={img1} className="h-40" alt="App Store" />
-                        <img src={img2} className="h-40" alt="Google Play" />
+                        <img src={img2} className="h-40 md:-mt-20 lg:mt-0" alt="Google Play" />
                     </div>
-                </nav>
+                </div>
             </footer>
 
             <hr />
