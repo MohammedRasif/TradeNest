@@ -196,7 +196,7 @@ const Banner = () => {
     ></div>
           <div className="absolute inset-0 rounded-xl transition-opacity duration-300 ease-in-out"></div>
 
-          <div className="relative z-10">
+          <div className="relative">
             <p className="text-gray-600 text-sm md:text-base font-semibold">
               SAVE UP TO 35% ON
             </p>

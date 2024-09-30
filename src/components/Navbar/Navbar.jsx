@@ -118,7 +118,7 @@ const Navbar = () => {
                     <li>
                       <button
                         onClick={logOut}
-                        className="btn text-white  bg-blue-500 hover:bg-blue-950 hover:text-white"
+                        className="btn text-white  bg-green-500 hover:bg-green-800 hover:text-white"
                       >
                         Logout
                       </button>
@@ -310,7 +310,7 @@ const Navbar = () => {
                     <li>
                       <button
                         onClick={logOut}
-                        className="btn w-full text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-950 hover:text-white"
+                        className="btn w-full text-white text-sm sm:text-base bg-green-500 hover:bg-green-800 hover:text-white"
                       >
                         Logout
                       </button>
@@ -377,21 +377,21 @@ const Navbar = () => {
 
             {/* Large Screen Menu Items */}
             <nav className="hidden lg:flex space-x-6">
-              <a href="#" className="text-gray-700 hover:text-green-600">
+              <Link to="promotions" className="text-gray-700 hover:text-green-600">
                 Promotions
-              </a>
-              <a href="#" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link to="stores" className="text-gray-700 hover:text-green-600">
                 Stores
-              </a>
-              <a href="#" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link to="outContacts" className="text-gray-700 hover:text-green-600">
                 Our Contacts
-              </a>
-              <a href="#" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link to="delivery" className="text-gray-700 hover:text-green-600">
                 Delivery & Return
-              </a>
-              <a href="#" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link to="outlet" className="text-gray-700 hover:text-green-600">
                 Outlet
-              </a>
+              </Link>
             </nav>
             {/* support  */}
             <div className="flex items-center pl-[570px] font-semibold  py-2">
