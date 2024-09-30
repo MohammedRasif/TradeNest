@@ -380,12 +380,12 @@ const Navbar = () => {
               <Link to="promotions" className="text-gray-700 hover:text-green-600">
                 Promotions
               </Link>
-              <Link to="stores" className="text-gray-700 hover:text-green-600">
+              {/* <Link to="stores" className="text-gray-700 hover:text-green-600">
                 Stores
               </Link>
               <Link to="outContacts" className="text-gray-700 hover:text-green-600">
                 Our Contacts
-              </Link>
+              </Link> */}
               <Link to="delivery" className="text-gray-700 hover:text-green-600">
                 Delivery & Return
               </Link>
