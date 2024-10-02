@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CiSettings, CiShop } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Delivery = () => {
   const [showMore, setShowMore] = useState(false);
@@ -10,6 +11,13 @@ const Delivery = () => {
   };
   return (
     <div className="lg:mx-52">
+        <div className="mx-3 my-3">
+        <h1 className="text-2xl">Delivery & Return</h1>
+        <button className="text-sm">
+          <Link to="/">HOME</Link>
+        </button>{" "}
+        / <button className="text-sm">DELIVERY & RETURN</button>
+      </div>
       <div className="flex flex-col lg:flex-row items-center bg-green-500 p-5 rounded-md my-3">
         <div className="text-black lg:w-1/2">
           <h1 className="text-3xl font-semibold">Delivery & Return</h1>

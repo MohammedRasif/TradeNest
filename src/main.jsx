@@ -10,6 +10,7 @@ import Register from "./components/Pages/Register.jsx";
 import AuthProvider from "./components/Provider/AuthProvider.jsx";
 import Promotions from "./components/Pages/Promotions.jsx";
 import Delivery from "./components/Pages/Delivery.jsx";
+import VeganMeat from "./components/VeganMeat/VeganMeat.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path:"/delivery",
         element:<Delivery></Delivery>
+      }
+      ,
+      {
+        path:"/veganMeat",
+        element:<VeganMeat></VeganMeat>
       }
     ],
   },
