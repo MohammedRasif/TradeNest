@@ -19,15 +19,6 @@ const Navbar = () => {
 
   const [activeTab, setActiveTab] = useState("categories"); // Controls active tab
 
-  const categories = [
-    { name: "Vegetables & Fruits", icon: "🍏", path: "/vegetables" },
-    { name: "Vegan Meat", icon: "🍖", path: "/Vegan" },
-    { name: "Seafood", icon: "🦐", path: "/Seafood" },
-    { name: "Dairy", icon: "🧀", path: "/Dairy" },
-    { name: "Bakery", icon: "🥖", path: "/Bakery" },
-    { name: "Beverages", icon: "🥤", path: "/Beverages" },
-    { name: "Weekly Discounts", icon: "💸", path: "/Weekly" },
-  ];
 
   const menuItems = [
     { name: "Item 1", path: "/item1" },
@@ -205,19 +196,27 @@ const Navbar = () => {
           <div className="flex-1 overflow-y-auto w-full">
             {activeTab === "categories" && (
               <ul className="mt-4">
-                {categories.map((category, index) => (
-                  <li
-                    key={index}
-                    className="flex justify-between items-center px-6 py-3 hover:bg-gray-200"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <span className="text-xl">{category.icon}</span>
-                      <span className="text-lg text-gray-700">
-                        {category.name}
-                      </span>
-                    </div>
-                  </li>
-                ))}
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-3 text-[18px]">🍏 Vegetables & Fruits</h5>
+                </Link>
+                <Link to="/veganMeat" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-3 text-[18px]">🍖 Vegan Meat</h5>
+                </Link>
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-5 text-[18px]">🦐 Seafood</h5>
+                </Link>
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-5 text-[18px]">🧀 Dairy</h5>
+                </Link>
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-5 text-[18px]">🥖 Bakery</h5>
+                </Link>
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-5 text-[18px]">🥤 Beverages</h5>
+                </Link>
+                <Link to="" onClick={() => setIsOpen(false)}>
+                  <h5 className="mt-5 text-[18px]">💸 Weekly Discounts</h5>
+                </Link>
               </ul>
             )}
 
@@ -228,6 +227,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     className="flex justify-between items-center px-6 py-3 hover:bg-gray-200"
+                    onClick={() => setIsOpen(false)} // Closes the menu on click
                   >
                     <div className="text-lg text-gray-700">{item.name}</div>
                   </li>
@@ -238,7 +238,7 @@ const Navbar = () => {
         </div>
 
         {/* Right-side icons for mobile */}
-        <div className="flex justify-center md:ml-48 ml-14 space-x-2 sm:space-x-4 mt-4">
+        <div className="flex justify-center md:ml-48 ml-14 space-x-2 sm:space-x-4 ">
           {/* Cart Icon */}
           <div className="relative flex items-center justify-center bg-orange-200/50 hover:bg-green-300/50 cursor-pointer rounded-full w-10 h-10">
             <FaCartShopping className="text-xl text-green-600" />
@@ -353,10 +353,11 @@ const Navbar = () => {
                 >
                   <FaTimes className="text-xl text-orange-500" />
                 </div>
-                <ul className="mt-8 space-y-4 ">
-                  {activeTab === "categories" && (
-                    <ul className="mt-4">
-                      {categories.map((category, index) => (
+                <button>
+                  <ul className="mt-8 space-y-4 ">
+                    {activeTab === "categories" && (
+                      <ul className="mt-4 text-start space-y-10">
+                        {/* {categories.map((category, index) => (
                         <li
                           key={index}
                           className="flex justify-between items-center px-2 py-3  hover:bg-gray-200"
@@ -368,16 +369,46 @@ const Navbar = () => {
                             </span>
                           </div>
                         </li>
-                      ))}
-                    </ul>
-                  )}
-                </ul>
+                      ))} */}
+
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-3 text-[18px]">
+                            🍏 Vegetables & Fruits
+                          </h5>
+                        </Link>
+                        <Link to="/veganMeat" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-3 text-[18px]">🍖 Vegan Meat</h5>
+                        </Link>
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-5 text-[18px]">🦐 Seafood</h5>
+                        </Link>
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-5 text-[18px]">🧀 Dairy</h5>
+                        </Link>
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-5 text-[18px]">🥖 Bakery</h5>
+                        </Link>
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-5 text-[18px]">🥤 Beverages</h5>
+                        </Link>
+                        <Link to="" onClick={() => setIsOpen(false)}>
+                          <h5 className="mt-5 text-[18px]">
+                            💸 Weekly Discounts
+                          </h5>
+                        </Link>
+                      </ul>
+                    )}
+                  </ul>
+                </button>
               </div>
             </div>
 
             {/* Large Screen Menu Items */}
             <nav className="hidden lg:flex space-x-6">
-              <Link to="promotions" className="text-gray-700 hover:text-green-600">
+              <Link
+                to="promotions"
+                className="text-gray-700 hover:text-green-600"
+              >
                 Promotions
               </Link>
               {/* <Link to="stores" className="text-gray-700 hover:text-green-600">
@@ -386,7 +417,10 @@ const Navbar = () => {
               <Link to="outContacts" className="text-gray-700 hover:text-green-600">
                 Our Contacts
               </Link> */}
-              <Link to="delivery" className="text-gray-700 hover:text-green-600">
+              <Link
+                to="delivery"
+                className="text-gray-700 hover:text-green-600"
+              >
                 Delivery & Return
               </Link>
               <Link to="outlet" className="text-gray-700 hover:text-green-600">

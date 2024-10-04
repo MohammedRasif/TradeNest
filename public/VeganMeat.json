@@ -15,9 +15,7 @@
     "country": "USA",
     "method": "Grilled",
     "rating": 4.5,
-    "latest": false,
-    "high": true,
-    "low": false,
+    "low": "low",
     "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696031/TradeNest/Vegan%20Meat/xlgrtowrrikdkyqleshu.webp",
     "title": {
       "category": "Burgers",
@@ -40,10 +38,8 @@
     "country": "Canada",
     "method": "Smoked",
     "rating": 4.7,
-    "latest": true,
-    "high": false,
-    "low": false,
-    "image": "https://example.com/images/vegan-bacon-strips.jpg",
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696032/TradeNest/Vegan%20Meat/w0ai3k7pdesj6nemgkcw.webp",
     "title": {
       "category": "Bacon",
       "type": "Pork"
@@ -65,10 +61,8 @@
     "country": "Germany",
     "method": "Fried",
     "rating": 4.8,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-chicken-nuggets.jpg",
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696031/TradeNest/Vegan%20Meat/by4rtxvhabqvxy4hnk3w.webp",
     "title": {
       "category": "Chicken",
       "type": "Nuggets"
@@ -90,10 +84,8 @@
     "country": "Brazil",
     "method": "Grilled",
     "rating": 4.9,
-    "latest": true,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-beef-steak.jpg",
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696030/TradeNest/Vegan%20Meat/bzxpysjonrf5nwqivv5x.webp",
     "title": {
       "category": "Beef",
       "type": "Steak"
@@ -115,10 +107,8 @@
     "country": "Australia",
     "method": "Pan-fried",
     "rating": 4.4,
-    "latest": false,
-    "high": false,
-    "low": true,
-    "image": "https://example.com/images/vegan-burger-patty.jpg",
+    "high": "high",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696030/TradeNest/Vegan%20Meat/gice1vgf3hgtcdhsfj7n.webp",
     "title": {
       "category": "Burgers",
       "type": "Beef"
@@ -140,10 +130,8 @@
     "country": "Netherlands",
     "method": "Grilled",
     "rating": 4.6,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-chicken-breast.jpg",
+    "high": "high",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696029/TradeNest/Vegan%20Meat/efbtkj1ngkr87vsanyyq.webp",
     "title": {
       "category": "Chicken",
       "type": "Breast"
@@ -165,10 +153,8 @@
     "country": "UK",
     "method": "Pan-fried",
     "rating": 4.5,
-    "latest": true,
-    "high": false,
-    "low": true,
-    "image": "https://example.com/images/vegan-bacon-rashers.jpg",
+    "high": "high",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696029/TradeNest/Vegan%20Meat/jghzsr7js2lj2fi4lrkw.webp",
     "title": {
       "category": "Bacon",
       "type": "Pork"
@@ -190,10 +176,8 @@
     "country": "USA",
     "method": "Roasted",
     "rating": 4.8,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-turkey-roast.jpg",
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696029/TradeNest/Vegan%20Meat/cegqbogs65x8bctntljz.webp",
     "title": {
       "category": "Turkey",
       "type": "Roast"
@@ -215,10 +199,8 @@
     "country": "Argentina",
     "method": "Stir-fried",
     "rating": 4.7,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-beef-strips.jpg",
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696028/TradeNest/Vegan%20Meat/pjcrpky5js6ffhuxvswh.webp",
     "title": {
       "category": "Beef",
       "type": "Strips"
@@ -240,10 +222,8 @@
     "country": "France",
     "method": "Fried",
     "rating": 4.9,
-    "latest": true,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-chicken-wings.jpg",
+    "high": "high",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696028/TradeNest/Vegan%20Meat/buni7tx8m36v368iohvn.webp",
     "title": {
       "category": "Chicken",
       "type": "Wings"
@@ -266,10 +246,8 @@
     "country": "Bangladesh",
     "method": "Grilled",
     "rating": 4.3,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-tofu-sausages.jpg",
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696027/TradeNest/Vegan%20Meat/sg2bkxihwmbdm2lcmteu.webp",
     "title": {
       "category": "Sausage",
       "type": "Tofu"
@@ -291,10 +269,8 @@
     "country": "Indonesia",
     "method": "Smoked",
     "rating": 4.7,
-    "latest": true,
-    "high": false,
-    "low": false,
-    "image": "https://example.com/images/vegan-tempeh-bacon.jpg",
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696027/TradeNest/Vegan%20Meat/cuulhn0ipzixqsjozj3y.jpg",
     "title": {
       "category": "Bacon",
       "type": "Tempeh"
@@ -316,10 +292,8 @@
     "country": "UK",
     "method": "Grilled",
     "rating": 4.6,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-mushroom-burgers.jpg",
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696027/TradeNest/Vegan%20Meat/mhmhwpxv20bvwbtlasj9.jpg",
     "title": {
       "category": "Burgers",
       "type": "Mushroom"
@@ -341,10 +315,8 @@
     "country": "India",
     "method": "Baked",
     "rating": 4.5,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-lentil-meatballs.jpg",
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696026/TradeNest/Vegan%20Meat/dgtnlzn3fqbvdjjo6vfb.jpg",
     "title": {
       "category": "Meatballs",
       "type": "Lentil"
@@ -366,10 +338,8 @@
     "country": "USA",
     "method": "Dehydrated",
     "rating": 4.4,
-    "latest": true,
-    "high": false,
-    "low": true,
-    "image": "https://example.com/images/vegan-seitan-jerky.jpg",
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696026/TradeNest/Vegan%20Meat/lexot8cceaxl6aldowpl.jpg",
     "title": {
       "category": "Jerky",
       "type": "Seitan"
@@ -391,10 +361,9 @@
     "country": "Mexico",
     "method": "Grilled",
     "rating": 4.8,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-jackfruit-tacos.jpg",
+    "high": "high",
+    
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696025/TradeNest/Vegan%20Meat/joh0yfpicsh9idtzrpfo.webp",
     "title": {
       "category": "Tacos",
       "type": "Jackfruit"
@@ -416,10 +385,9 @@
     "country": "Italy",
     "method": "Baked",
     "rating": 4.5,
-    "latest": true,
-    "high": false,
-    "low": true,
-    "image": "https://example.com/images/vegan-chickpea-nuggets.jpg",
+    "high": "high",
+    
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696025/TradeNest/Vegan%20Meat/ebgfb1a2napp3odzhf8q.webp",
     "title": {
       "category": "Nuggets",
       "type": "Chickpea"
@@ -441,10 +409,9 @@
     "country": "Germany",
     "method": "Fried",
     "rating": 4.6,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-eggplant-schnitzel.jpg",
+    
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696024/TradeNest/Vegan%20Meat/wd3xu6sbrdgly2wznoca.webp",
     "title": {
       "category": "Schnitzel",
       "type": "Eggplant"
@@ -466,10 +433,9 @@
     "country": "Thailand",
     "method": "Cooked",
     "rating": 4.8,
-    "latest": true,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-coconut-curry.jpg",
+    
+    "high": "high",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696024/TradeNest/Vegan%20Meat/ozagfozxu18o8opzkvle.webp",
     "title": {
       "category": "Curry",
       "type": "Coconut"
@@ -491,13 +457,177 @@
     "country": "Mexico",
     "method": "Grilled",
     "rating": 4.7,
-    "latest": false,
-    "high": true,
-    "low": false,
-    "image": "https://example.com/images/vegan-black-bean-tacos.jpg",
+    
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696024/TradeNest/Vegan%20Meat/wybvqnqpdoh34exlwh32.webp",
     "title": {
       "category": "Tacos",
       "type": "Black Beans"
     }
   }
+  ,
+  {
+    "id": 21,
+    "name": "Vegan BBQ Riblets",
+    "price": 13.99,
+    "discountPrice": 11.99,
+    "proteins": 20,
+    "calories": 250,
+    "carbohydrates": 15,
+    "seePeople": 5,
+    "brand": "Plant Grill",
+    "shelfLife": "8 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Soy Protein",
+    "country": "USA",
+    "method": "Grilled",
+    "rating": 4.7,
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696016/TradeNest/Vegan%20Meat/er7zphhurumu0aa3ozxx.jpg",
+    "title": {
+      "category": "Riblets",
+      "type": "Soy"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Vegan Chickpea Patties",
+    "price": 9.99,
+    "discountPrice": 7.99,
+    "proteins": 16,
+    "calories": 220,
+    "carbohydrates": 18,
+    "seePeople": 3,
+    "brand": "Veggie Delight",
+    "shelfLife": "6 months",
+    "temperature": "Refrigerated",
+    "grenousSpecies": "Chickpea",
+    "country": "Italy",
+    "method": "Baked",
+    "rating": 4.5,
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696016/TradeNest/Vegan%20Meat/yqsyqhihtshakke2b90j.jpg",
+    "title": {
+      "category": "Patties",
+      "type": "Chickpea"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Vegan Cauliflower Bites",
+    "price": 8.49,
+    "discountPrice": 6.49,
+    "proteins": 8,
+    "calories": 150,
+    "carbohydrates": 12,
+    "seePeople": 4,
+    "brand": "Crunch Veg",
+    "shelfLife": "7 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Cauliflower",
+    "country": "Canada",
+    "method": "Fried",
+    "rating": 4.4,
+  
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696016/TradeNest/Vegan%20Meat/qbt0boookh5guaukkrkm.jpg",
+    "title": {
+      "category": "Bites",
+      "type": "Cauliflower"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Vegan Sweet Potato Fries",
+    "price": 6.99,
+    "discountPrice": 4.99,
+    "proteins": 4,
+    "calories": 180,
+    "carbohydrates": 25,
+    "seePeople": 5,
+    "brand": "Fry Time",
+    "shelfLife": "12 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Sweet Potato",
+    "country": "USA",
+    "method": "Fried",
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696015/TradeNest/Vegan%20Meat/tnafycmwgyjepphr0llp.jpg",
+    "title": {
+      "category": "Fries",
+      "type": "Sweet Potato"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Vegan Portobello Steaks",
+    "price": 15.99,
+    "discountPrice": 13.49,
+    "proteins": 10,
+    "calories": 210,
+    "carbohydrates": 9,
+    "seePeople": 4,
+    "brand": "Mushroom Magic",
+    "shelfLife": "6 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Portobello Mushroom",
+    "country": "UK",
+    "method": "Grilled",
+    "rating": 4.6,
+    "latest": "latest",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696015/TradeNest/Vegan%20Meat/i9gorebhepdxk6buhmbd.jpg",
+    "title": {
+      "category": "Steaks",
+      "type": "Mushroom"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Vegan Black Bean Burgers",
+    "price": 10.99,
+    "discountPrice": 8.99,
+    "proteins": 18,
+    "calories": 220,
+    "carbohydrates": 16,
+    "seePeople": 5,
+    "brand": "Burger Bliss",
+    "shelfLife": "9 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Black Bean",
+    "country": "Mexico",
+    "method": "Grilled",
+    "rating": 4.8,
+    "high":"high",
+    
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696015/TradeNest/Vegan%20Meat/qtvgcnxa2ryt2je5ftmx.jpg",
+    "title": {
+      "category": "Burgers",
+      "type": "Black Bean"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Vegan Zucchini Fritters",
+    "price": 9.49,
+    "discountPrice": 7.49,
+    "proteins": 7,
+    "calories": 160,
+    "carbohydrates": 12,
+    "seePeople": 4,
+    "brand": "Green Eats",
+    "shelfLife": "7 months",
+    "temperature": "Frozen",
+    "grenousSpecies": "Zucchini",
+    "country": "Germany",
+    "method": "Fried",
+    "rating": 4.5,
+    
+    "low": "low",
+    "image": "https://res.cloudinary.com/dqb5izi3a/image/upload/v1727696014/TradeNest/Vegan%20Meat/orfwndpigz8el40s7cb6.jpg",
+    "title": {
+      "category": "Fritters",
+      "type": "Zucchini"
+    }
+  }
+
 ]
