@@ -278,7 +278,7 @@
   },
   {
     "id": 13,
-    "name": "Vegan Mushroom Burgers",
+    "name": "Vegan Mushroom ",
     "price": 11.99,
     "discountPrice": 9.99,
     "proteins": 15,
@@ -443,7 +443,7 @@
   },
   {
     "id": 20,
-    "name": "Vegan Black Bean Tacos",
+    "name": "Vegan Black Tacos",
     "price": 10.99,
     "discountPrice": 8.99,
     "proteins": 17,
@@ -538,7 +538,7 @@
   },
   {
     "id": 24,
-    "name": "Vegan Sweet Potato Fries",
+    "name": "Vegan Sweet Fries",
     "price": 6.99,
     "discountPrice": 4.99,
     "proteins": 4,
@@ -583,7 +583,7 @@
   },
   {
     "id": 26,
-    "name": "Vegan Black Bean Burgers",
+    "name": "Vegan Black Burgers",
     "price": 10.99,
     "discountPrice": 8.99,
     "proteins": 18,

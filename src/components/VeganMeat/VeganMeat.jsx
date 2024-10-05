@@ -11,6 +11,7 @@ const Promotions = () => {
   const [currentPage, setCurrentPage] = useState(1); // Current page number
   const [isHovered, setIsHovered] = useState(false);
 
+
   const options = [
     'sort by Popularity', 
     'sort by Latest', 
@@ -77,6 +78,7 @@ const handleSelect = (option) => {
           </button>{" "}
           / <button className="text-sm">PROMOTIONS</button>
         </div>
+        
         <div>
           <Dropdown 
             options={options} 
@@ -90,6 +92,7 @@ const handleSelect = (option) => {
 
       <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-2">
         {currentItems.map((foots) => (
+         <Link to={`/veganMeat/${foots.id}`} key={foots.id}>
           <div
             key={foots.id}
             className="card bg-base-100 lg:w-64 md:w-56 w-36 lg:h-auto md:h-auto h-60 shadow-lg border rounded-lg relative group overflow-hidden transition-all duration-300"
@@ -157,6 +160,7 @@ const handleSelect = (option) => {
               </div>
             </div>
           </div>
+         </Link>
         ))}
       </div>
 
