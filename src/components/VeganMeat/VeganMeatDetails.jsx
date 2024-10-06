@@ -51,16 +51,18 @@ const VeganMeatDetails = () => {
                         <button className="text-neutral-500">Vegan Meat</button>
                         <p>/</p>
                         <button className="text-neutral-500">{foot?.title?.type}</button>
+                        <p className="hidden lg:inline-block md:inline-block">/</p>
+                        <button className="text-neutral-500  hidden lg:inline-block md:inline-block">{foot?.name}</button>
                     </div>
                     <h1 className="text-3xl md:text-4xl py-2">{foot?.name}</h1>
 
                     <div className="flex items-center text-lg md:text-2xl space-x-2">
                         <s className="flex text-slate-400 items-center">
-                            <FaBangladeshiTakaSign />
+                            <FaBangladeshiTakaSign className="pb-2" />
                             <h3>{totalPrice}</h3>
                         </s>
                         <div className="flex items-center">
-                            <FaBangladeshiTakaSign />
+                            <FaBangladeshiTakaSign className="pb-2" />
                             <h3>{totalDiscountPrice}</h3>
                         </div>
                     </div>
@@ -82,7 +84,7 @@ const VeganMeatDetails = () => {
                     </div>
 
                     {/* Product Nutritional Information */}
-                    <div className="grid grid-cols-2 gap-4 text-sm md:text-base mt-6">
+                    <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-4 text-sm md:text-base mt-6">
                         <div>
                             <h6 className="font-bold">Calories</h6>
                             <p className="text-slate-500">{foot?.calories} kcal</p>

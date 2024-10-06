@@ -12,6 +12,7 @@ import Promotions from "./components/Pages/Promotions.jsx";
 import Delivery from "./components/Pages/Delivery.jsx";
 import VeganMeat from "./components/VeganMeat/VeganMeat.jsx";
 import VeganMeatDetails from "./components/VeganMeat/VeganMeatDetails.jsx";
+import Vegan from "./components/Pages/Vegan.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path:"/veganMeat/:id",
         element:<VeganMeatDetails></VeganMeatDetails>,
         loader:() => fetch('/VeganMeat.json')
+      },
+      {
+        path:"/vegan",
+        element:<Vegan></Vegan>
       }
     ],
   },
