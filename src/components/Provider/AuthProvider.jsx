@@ -51,36 +51,41 @@ const AuthProvider = ({ children }) => {
     })
   }
 
-  // onAuthStateChange
-  useEffect(() => {
-   
-    const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      const userEmail = currentUser?.email || user?.email;
-      const loggedUser = {email:userEmail};
 
-      setUser(currentUser)
-      // console.log('CurrentUser-->', currentUser)
-      setLoading(false);
-      if (currentUser){
-        axios.post('http://localhost:5000',loggedUser , {
-          withCredentials:true })
-        .then(res => {
-           console.log('token response',res.data)
-        })
-      }
-      else{
-        axios.post('http://localhost:5000',loggedUser ,{
-          withCredentials:true
-        })
-        .then(res => {
-           console.log(res.data)
-        })
-      }
-    })
-    return () => {
-      return unsubscribe()
+  // Save user in database
+  const saveUser = async (user) => {
+    if (!user?.email) return;
+    const currentUser = {
+      email: user.email,
+      role: "guest",
+      status: "Verified",
+    };
+    try {
+      const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/user`, currentUser);
+      return data;
+    } catch (error) {
+      console.error("Error saving user:", error);
     }
-  }, [])
+  };
+  // onAuthStateChange
+  // Handle authentication state changes
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      setLoading(true);
+
+      if (currentUser) {
+        // await getToken(currentUser.email);
+        await saveUser(currentUser);
+      } else {
+        setUser(null); // Set user to null if logged out
+      }
+
+      setLoading(false); // Done loading, set to false
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const authInfo = {
     user,
