@@ -13,6 +13,7 @@ import Delivery from "./components/Pages/Delivery.jsx";
 import VeganMeat from "./components/VeganMeat/VeganMeat.jsx";
 import VeganMeatDetails from "./components/VeganMeat/VeganMeatDetails.jsx";
 import Vegan from "./components/Pages/Vegan.jsx";
+import DashboardLayout from "./components/Dashboard/Layout/DashboardLayout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,19 @@ const router = createBrowserRouter([
       }
     ],
   },
+
+  {
+    path: "/dashboard",
+    element: (
+        <DashboardLayout></DashboardLayout>
+    ),
+    // children: [
+    //   {
+    //     index: true,
+    //     element: 
+    //   },
+    // ]
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
