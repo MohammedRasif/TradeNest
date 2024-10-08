@@ -14,6 +14,7 @@ import VeganMeat from "./components/VeganMeat/VeganMeat.jsx";
 import VeganMeatDetails from "./components/VeganMeat/VeganMeatDetails.jsx";
 import Vegan from "./components/Pages/Vegan.jsx";
 import DashboardLayout from "./components/Dashboard/Layout/DashboardLayout.jsx";
+import Dashboard from "./components/Dashboard/components/Pages/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,12 +63,12 @@ const router = createBrowserRouter([
     element: (
         <DashboardLayout></DashboardLayout>
     ),
-    // children: [
-    //   {
-    //     index: true,
-    //     element: 
-    //   },
-    // ]
+    children: [
+      {
+        index: true,
+        element: <Dashboard></Dashboard>
+      },
+    ]
   }
 ]);
 
