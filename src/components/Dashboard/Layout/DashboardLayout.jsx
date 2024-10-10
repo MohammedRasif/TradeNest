@@ -4,11 +4,11 @@ import Sidebar from "../Sidebar/Sidebar";
 const DashboardLayout = () => {
     return (
        
-            <div className="relative min-h-screen md:flex">
+            <div className="relative min-h-screen md:flex font-josefin ">
             {/* sidebar */}
             <Sidebar></Sidebar>
             {/* Outlet --> Dynamic content */}
-            <div className="flex-1 md:ml-72">
+            <div className="flex-1 md:ml-72 bg-slate-100">
             <div className="p-5"><Outlet></Outlet></div>
             </div>
         </div>

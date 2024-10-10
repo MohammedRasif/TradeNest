@@ -15,6 +15,7 @@ import VeganMeatDetails from "./components/VeganMeat/VeganMeatDetails.jsx";
 import Vegan from "./components/Pages/Vegan.jsx";
 import DashboardLayout from "./components/Dashboard/Layout/DashboardLayout.jsx";
 import Dashboard from "./components/Dashboard/components/Pages/Dashboard.jsx";
+import Review from "./components/Dashboard/components/Review.jsx";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard></Dashboard>
+      },
+      {
+        path:"/dashboard/review",
+        element: <Review></Review>
       },
     ]
   }

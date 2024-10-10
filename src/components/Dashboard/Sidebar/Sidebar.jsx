@@ -8,11 +8,16 @@ import { GoChevronRight } from "react-icons/go";
 
 const Sidebar = () => {
   const { logOut } = useAuth();
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(true);
 
   // Sidebar Responsive Handler
   const handleToggle = () => {
     setActive(!isActive);
+  };
+
+  // Close sidebar when an item is clicked on small screens
+  const handleCloseSidebar = () => {
+    setActive(true);
   };
 
   // State to toggle the dropdowns individually
@@ -41,7 +46,7 @@ const Sidebar = () => {
             </h3>
           </div>
           <button
-            onClick={handleToggle}
+            onClick={handleToggle} 
             className="mobile-menu-button p-4 focus:outline-none focus:bg-green-400"
           >
             <AiOutlineBars className="h-5 w-5" />
@@ -55,7 +60,7 @@ const Sidebar = () => {
           }  md:translate-x-0  transition duration-200 ease-in-out`}
         >
           <div>
-            <div className="w-full hidden md:flex px-4 py-2 shadow-lg  justify-center items-center bg-green-500 mx-auto">
+            <div className="w-full hidden md:flex px-4 py-2 shadow-lg justify-center items-center bg-green-500 mx-auto">
               <Link to="/">
                 <h3 className="text-3xl font-semibold text-center lg:-ml-4">
                   Trade<span className="text-green-900">Nest</span>
@@ -64,117 +69,105 @@ const Sidebar = () => {
             </div>
 
             {/* Nav Items */}
-            <div className="flex flex-col  justify-between flex-1 mt-6 space-y-4 ">
-              <Link>
-                <button className=" flex justify-start  lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700  p-2">
+            <div className="flex flex-col justify-between flex-1 mt-6 space-y-4">
+              <Link onClick={handleCloseSidebar}>
+                <button className="flex justify-start lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700 p-2">
                   <h1 className="font-semibold">🏠 Dashboard</h1>
                 </button>
               </Link>
 
               {/* Products Dropdown */}
-              <button>
-                <Link onClick={toggleProductsDropdown}>
-                  <div className="flex items-center  justify-between space-x-1 lg:text-[19px] md:text-[19px] text-[17px] cursor-pointer hover:bg-green-700  p-2">
-                    <div className="flex items-center space-x-2 pl-1">
-                      <MdProductionQuantityLimits />
-                      <h1 className="font-semibold">Products</h1>
-                    </div>
-                    <GoChevronRight
-                      className={`transition-transform duration-300 pt-1 font-extrabold text-2xl ${
-                        isProductsOpen ? "rotate-90" : ""
-                      }`}
-                    />
+              <button onClick={toggleProductsDropdown}>
+                <div className="flex items-center justify-between space-x-1 lg:text-[19px] md:text-[19px] text-[17px] cursor-pointer hover:bg-green-700 p-2">
+                  <div className="flex items-center space-x-2 pl-1">
+                    <MdProductionQuantityLimits />
+                    <h1 className="font-semibold">Products</h1>
                   </div>
-                </Link>
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isProductsOpen ? "max-h-40" : "max-h-0"
-                  }`}
-                >
-                  <Link to="/dashboard/addProduct">
-                    <div className="mt-2 ml-6 p-2  bg-green-600 shadow-lg hover:bg-green-700">
-                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">
-                        🛒 Add Product
-                      </h1>
-                    </div>
-                  </Link>
-                  <Link to="/dashboard/editProduct">
-                    <div className="mt-2 ml-6 p-2  bg-green-600 shadow-lg hover:bg-green-700">
-                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">
-                        ✏️ Edit Product
-                      </h1>
-                    </div>
-                  </Link>
-                  <Link to="/dashboard/viewProduct">
-                    <div className="mt-2 ml-6 p-2  bg-green-600 shadow-lg hover:bg-green-700">
-                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">
-                        👁️ View Product
-                      </h1>
-                    </div>
-                  </Link>
+                  <GoChevronRight
+                    className={`transition-transform duration-300 pt-1 font-extrabold text-2xl ${
+                      isProductsOpen ? "rotate-90" : ""
+                    }`}
+                  />
                 </div>
               </button>
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                  isProductsOpen ? "max-h-40" : "max-h-0"
+                }`}
+              >
+                <Link to="/dashboard/addProduct" onClick={handleCloseSidebar}>
+                  <div className="mt-2 ml-6 p-2 bg-green-600 shadow-lg hover:bg-green-700">
+                    <h1 className="lg:text-lg md:text-lg text-[15px] text-white">🛒 Add Product</h1>
+                  </div>
+                </Link>
+                <Link to="/dashboard/editProduct" onClick={handleCloseSidebar}>
+                  <div className="mt-2 ml-6 p-2 bg-green-600 shadow-lg hover:bg-green-700">
+                    <h1 className="lg:text-lg md:text-lg text-[15px] text-white">✏️ Edit Product</h1>
+                  </div>
+                </Link>
+                <Link to="/dashboard/viewProduct" onClick={handleCloseSidebar}>
+                  <div className="mt-2 ml-6 p-2 bg-green-600 shadow-lg hover:bg-green-700">
+                    <h1 className="lg:text-lg md:text-lg text-[15px] text-white">👁️ View Product</h1>
+                  </div>
+                </Link>
+              </div>
 
-              {/* Categories  */}
-              <Link>
-                <button className="flex justify-start  lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700  p-2">
+              {/* Categories */}
+              <Link onClick={handleCloseSidebar}>
+                <button className="flex justify-start lg:text-[19px] w-full md:text-[19px] -mt-5 pb-2 text-[17px] hover:bg-green-700 p-2">
                   <h1 className="font-semibold">📂 Categories</h1>
                 </button>
               </Link>
 
               {/* Orders */}
-              <Link>
-                <button className="flex justify-start  lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700  p-2">
+              <Link onClick={handleCloseSidebar}>
+                <button className="flex justify-start lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700 p-2">
                   <h1 className="font-semibold">📦 Orders</h1>
                 </button>
               </Link>
 
               {/* Users Dropdown */}
               <div>
-                <Link onClick={toggleUsersDropdown}>
-                  <div className="flex items-center  justify-between space-x-1 lg:text-[19px] md:text-[19px] text-[17px] cursor-pointer hover:bg-green-700  p-2">
+                <button onClick={toggleUsersDropdown} className="w-full">
+                  <div className="flex items-center  justify-between space-x-1 lg:text-[19px] md:text-[19px] text-[17px] cursor-pointer hover:bg-green-700 p-2">
                     <div className="flex items-center space-x-2 pl-1">
-                      <h1 className="font-semibold"> 👥 User</h1>
+                      <h1 className="font-semibold">👥 User</h1>
                     </div>
                     <GoChevronRight
                       className={`transition-transform duration-300 pt-1 font-extrabold text-2xl ${
-                        isProductsOpen ? "rotate-90" : ""
+                        isUsersOpen ? "rotate-90" : ""
                       }`}
                     />
                   </div>
-                </Link>
+                </button>
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
                     isUsersOpen ? "max-h-40" : "max-h-0"
                   }`}
                 >
-                  <Link to="/dashboard/viewUser">
-                    <div className="mt-2 ml-6 p-2  bg-green-600 shadow-lg hover:bg-green-700">
-                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">
-                        👁️ View User
-                      </h1>
+                  <Link to="/dashboard/viewUser" onClick={handleCloseSidebar}>
+                    <div className="mt-2 ml-6 p-2 bg-green-600 shadow-lg hover:bg-green-700">
+                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">👁️ View User</h1>
                     </div>
                   </Link>
-                  <Link to="/dashboard/editUser">
-                    <div className="mt-2 ml-6 p-2  bg-green-600 shadow-lg hover:bg-green-700">
-                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">
-                        ✏️ Edit User
-                      </h1>
+                  <Link to="/dashboard/editUser" onClick={handleCloseSidebar}>
+                    <div className="mt-2 ml-6 p-2 bg-green-600 shadow-lg hover:bg-green-700">
+                      <h1 className="lg:text-lg md:text-lg text-[15px] text-white">✏️ Edit User</h1>
                     </div>
                   </Link>
                 </div>
               </div>
 
               {/* Reviews */}
-              <Link>
-                <button className="flex justify-start  lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700  p-2">
+              <Link to="/dashboard/review" onClick={handleCloseSidebar}>
+                <button className="flex justify-start lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700 p-2">
                   <h1 className="font-semibold">📝 Reviews</h1>
                 </button>
               </Link>
 
               {/* Payments */}
-              <Link>
-                <button className="flex justify-start  lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700  p-2">
+              <Link onClick={handleCloseSidebar}>
+                <button className="flex justify-start lg:text-[19px] w-full md:text-[19px] pb-2 text-[17px] hover:bg-green-700 p-2">
                   <h1 className="font-semibold">💳 Payments</h1>
                 </button>
               </Link>
@@ -184,20 +177,15 @@ const Sidebar = () => {
           <div>
             <hr />
             <button
-              onClick={logOut}
+              onClick={() => {
+                logOut();
+                handleCloseSidebar(); // Close sidebar on logout
+              }}
               className="flex w-full items-center px-4 py-2 mt-5 text-white hover:bg-green-700 transition-colors duration-300 transform"
             >
-              <GrLogout className="w-5 h-5" />
+              <GrLogout />
               <span className="mx-4 font-medium">Logout</span>
             </button>
-
-            {/* Settings */}
-            <Link>
-              <button className="flex w-full items-start pl-3 font-medium hover:bg-green-700  p-2">
-                <h1>⚙️</h1>
-                <h1 className="pl-3">Settings</h1>
-              </button>
-            </Link>
           </div>
         </div>
       </>
