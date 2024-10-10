@@ -4,6 +4,8 @@ import Stack from '@mui/material/Stack';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { PieChart, Pie } from 'recharts';
+
 
 const Dashboard = () => {
     const [connectNulls, setConnectNulls] = React.useState(true);
@@ -86,6 +88,14 @@ const Dashboard = () => {
           }
     ]
 
+    const data = [
+        { name: 'Group A', value: 350, fill: '#8884d8' }, // purple
+        { name: 'Group B', value: 280, fill: '#82ca9d' }, // green
+        { name: 'Group C', value: 200, fill: '#ffc658' }, // yellow
+        { name: 'Group D', value: 250, fill: '#ff8042' },  // orange
+        { name: 'Group E', value: 150, fill: '#a4de6c' }, // light green
+        { name: 'Group F', value: 350, fill: '#d0ed57' }  // light yellow
+      ];
     return (
         <div>
             <h1 className="text-3xl font-semibold">Dashboard</h1>
@@ -135,7 +145,8 @@ const Dashboard = () => {
             </div>
 
             {/* Line Chart */}
-            <div className="mt-10 bg-white p-5 rounded-md">
+            <h1 className="mt-10 text-2xl font-semibold mb-2">Sales Status</h1>
+            <div className=" bg-white p-5 rounded-md">
                 <Stack sx={{ width: '100%' }}>
                     <FormControlLabel
                         checked={connectNulls}
@@ -164,8 +175,50 @@ const Dashboard = () => {
                 </Stack>
             </div>
             </div>
-            <div>
-                <h1>this is </h1>
+            <div className="mt-5">
+                <h1 className="text-2xl font-semibold">Sales Category </h1>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-5">
+                    <h4>Vegetables & Fruits</h4>
+                    <p className="w-20 h-4 bg-[#8884d8]"></p>
+                </div>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-2">
+                    <h4>See Food</h4>
+                    <p className="w-20 h-4 bg-[#82ca9d]"></p>
+                </div>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-2">
+                    <h4>Dairy</h4>
+                    <p className="w-20 h-4 bg-[#ffc658]"></p>
+                </div>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-2">
+                    <h4>Bakery</h4>
+                    <p className="w-20 h-4 bg-[#ff8042]"></p>
+                </div>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-2">
+                    <h4>Beverages</h4>
+                    <p className="w-20 h-4 bg-[#a4de6c]"></p>
+                </div>
+                <div className="flex items-center justify-between mr-10 space-x-2 mt-2">
+                    <h4>Vegan Meat</h4>
+                    <p className="w-20 h-4 bg-[#d0ed57]"></p>
+                </div>
+                
+            <div className="bg-white lg:mt-14">
+            <PieChart width={300} height={300}>
+                <Pie
+                data={data}
+                innerRadius={30}
+                outerRadius={100}
+                paddingAngle={5}
+                cornerRadius={5}
+                startAngle={-45}
+                endAngle={225}
+                cx={150}
+                cy={150}
+                dataKey="value"
+                />
+            </PieChart>
+            </div>
+
             </div>
            </div>
 
