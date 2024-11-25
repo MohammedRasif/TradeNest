@@ -1,6 +1,6 @@
-Currently, two official plugins are available:
 # React + Vite
 
+Currently, two official plugins are available:
 
 
 
